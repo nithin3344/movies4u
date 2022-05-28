@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "107102530739",
+    "project_id": "movies4u-2e2e6",
+    "storage_bucket": "movies4u-2e2e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107102530739:android:8c1466d6cf3ca330b314c6",
+        "android_client_info": {
+          "package_name": "com.example.movies4u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107102530739-f4o0gi3mstk8ub4l4budppstp1vhcugc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRJ2cimlHfOSYft_Rlf-TaRcefYhAj30A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107102530739-f4o0gi3mstk8ub4l4budppstp1vhcugc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
