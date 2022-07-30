@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Sandeep_Projects/Movies_for_You/movies4u/app/src/main/res/layout/activity_login.xml" value="0.1546875" />
+        <entry key="..\:/Sandeep_Projects/Movies_for_You/movies4u/app/src/main/res/layout/activity_main.xml" value="0.1546875" />
+        <entry key="..\:/Sandeep_Projects/Movies_for_You/movies4u/app/src/main/res/layout/activity_register.xml" value="0.6223929747530187" />
+        <entry key="..\:/Sandeep_Projects/Movies_for_You/movies4u/app/src/main/res/layout/fragment_movies_list.xml" value="0.13645833333333332" />
+        <entry key="..\:/Sandeep_Projects/Movies_for_You/movies4u/app/src/main/res/layout/movie_layout.xml" value="0.33" />
         <entry key="..\:/Users/nithin/AndroidStudioProjects/movies4u/app/src/main/res/drawable/btn_bg.xml" value="0.108" />
         <entry key="..\:/Users/nithin/AndroidStudioProjects/movies4u/app/src/main/res/drawable/ic_wave.xml" value="0.108" />
         <entry key="..\:/Users/nithin/AndroidStudioProjects/movies4u/app/src/main/res/drawable/input_bg.xml" value="0.108" />
@@ -13,7 +18,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

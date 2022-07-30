@@ -74,7 +74,7 @@
         android:background="@drawable/input_bg"
         android:ems="10"
         android:hint="*********"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
