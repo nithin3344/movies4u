@@ -1,10 +1,14 @@
 package com.example.movies4u;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -23,37 +29,60 @@ import com.google.firebase.storage.StorageReference;
 
 
 public class Home_Fragment extends Fragment {
+    CardView cardsuggestions;
+    CardView cardott;
+    CardView cardratings;
+    CardView cardyoutube;
 
 
-    RecyclerView recyclerView;
-    MainpostsAdapter mainpostsAdapter;
-    @SuppressLint("MissingInflatedId")
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_home_, container, false);
-        recyclerView =(RecyclerView)view.findViewById(R.id.rv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        FirebaseRecyclerOptions<MainpostsModel> options =
-                new FirebaseRecyclerOptions.Builder<MainpostsModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Posts"), MainpostsModel.class)
-                        .build();
+        cardsuggestions=(CardView) view.findViewById(R.id.cardsuggestions);
+        cardott=(CardView) view.findViewById(R.id.cardott);
+        cardratings=(CardView) view.findViewById(R.id.cardratings);
+        cardyoutube=(CardView) view.findViewById(R.id.cardyoutube);
 
-//        Log.d("text", FirebaseDatabase.getInstance().getReference().child("Posts").child("post1").toString());
-        mainpostsAdapter = new MainpostsAdapter(options);
-        recyclerView.setAdapter(mainpostsAdapter);
+        cardsuggestions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                replaceFragnent(new fragment_suggestions());
+            }
+        });
+
+        cardott.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show_toast("you clicked on ott tab ");
+            }
+        });
+
+        cardratings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show_toast("you clicked on ratings tab ");
+            }
+        });
+
+        cardyoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                show_toast("you clicked on youtube tab ");
+            }
+        });
+
         return view;
     }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mainpostsAdapter.startListening();
+    private void show_toast(String message){
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mainpostsAdapter.startListening();
+    private void replaceFragnent(Fragment fragment) {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.commit();
+        //        fragmentTransaction.addToBackStack()
     }
 }

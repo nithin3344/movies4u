@@ -1,6 +1,5 @@
 package com.example.movies4u;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,21 +13,19 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import java.util.concurrent.RecursiveAction;
-
-public class MainpostsAdapter extends FirebaseRecyclerAdapter<MainpostsModel,MainpostsAdapter.myViewHolder> {
+public class Suggestions_Adapter extends FirebaseRecyclerAdapter<Suggestions_model,Suggestions_Adapter.myViewHolder> {
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
      *
      * @param options
      */
-    public MainpostsAdapter(@NonNull FirebaseRecyclerOptions<MainpostsModel> options) {
+    public Suggestions_Adapter(@NonNull FirebaseRecyclerOptions<Suggestions_model> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull MainpostsModel model) {
+    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull Suggestions_model model) {
         holder.title.setText(model.getTitle());
         holder.description.setText(model.getDescription());
 
@@ -42,7 +39,7 @@ public class MainpostsAdapter extends FirebaseRecyclerAdapter<MainpostsModel,Mai
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_posts_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.suggestions_item,parent,false);
         return new myViewHolder(view);
     }
 

@@ -25,8 +25,10 @@ public class login_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
+
         dontHaveAccount = findViewById(R.id.dontHaveAccount);
         ProgressBar pb = findViewById(R.id.progressBar);
+
         pb.setVisibility(View.GONE);
         dontHaveAccount.setOnClickListener(view -> {
             Intent registerintent = new Intent(login_activity.this, activity_register.class);
@@ -54,7 +56,10 @@ public class login_activity extends AppCompatActivity {
                         finish();
                     } else
                         auth.getCurrentUser().sendEmailVerification()
-                                .addOnCompleteListener(task -> Toast.makeText(login_activity.this, "Verification email sent", Toast.LENGTH_SHORT).show())
+                                .addOnCompleteListener(task -> {
+                                    pb.setVisibility(View.GONE);
+                                    Toast.makeText(login_activity.this, "Verification email sent", Toast.LENGTH_SHORT).show();
+                                })
                                 .addOnFailureListener(e -> Toast.makeText(login_activity.this, "something went wrong", Toast.LENGTH_SHORT).show());
                 }).addOnFailureListener(e -> {
                     pb.setVisibility(View.GONE);
@@ -62,6 +67,7 @@ public class login_activity extends AppCompatActivity {
                 });
 
             } else {
+                pb.setVisibility(View.GONE);
                 Toast.makeText(login_activity.this, "Fields are empty", Toast.LENGTH_SHORT).show();
             }
         });

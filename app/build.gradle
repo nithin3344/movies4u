@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -43,6 +43,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.0.6'
 
     implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+
+    //circle imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     implementation 'androidx.cardview:cardview:1.0.0'
@@ -55,6 +57,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 }
-
+//firebase
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'

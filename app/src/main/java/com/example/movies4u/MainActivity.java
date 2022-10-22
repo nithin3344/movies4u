@@ -1,6 +1,7 @@
 package com.example.movies4u;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.Home:
                     replaceFragnent(new Home_Fragment());
                     break;
+                case R.id.Explore:
+                    replaceFragnent(new Explore_Fragment());
+                    break;
                 case R.id.Profile:
                     replaceFragnent(new Profile_Fragment());
                     break;
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
-//        fragmentTransaction.addToBackStack()
+//        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }
