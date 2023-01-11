@@ -55,21 +55,24 @@ public class Home_Fragment extends Fragment {
         cardott.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                show_toast("you clicked on ott tab ");
+
+                replaceFragnent(new fragment_ottupdates());
             }
         });
 
         cardratings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                show_toast("you clicked on ratings tab ");
+
+                replaceFragnent(new fragment_ratings());
             }
         });
 
         cardyoutube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                show_toast("you clicked on youtube tab ");
+
+                replaceFragnent(new fragment_YoutubeVideos());
             }
         });
 

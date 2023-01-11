@@ -18,8 +18,7 @@
         android:text="DashBoard"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:background="@color/logo_color"/>
+        android:textStyle="bold"/>
 
     <GridLayout
         android:columnCount="2"
