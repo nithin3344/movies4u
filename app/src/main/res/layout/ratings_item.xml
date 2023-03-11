@@ -65,15 +65,7 @@
             android:textSize="15dp"
             />
 
-        <ImageView
-            android:id="@+id/speech_bubble"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_toRightOf="@+id/heartLayout"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_speech_bubble_comment"
-            android:visibility="visible"
-            android:layout_centerVertical="true"/>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -84,14 +76,36 @@
             android:paddingLeft="10dp"
             android:layout_marginBottom="5dp">
 
+            <ImageView
+                android:id="@+id/speech_bubble"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_speech_bubble_comment"
+                android:visibility="visible"
+                android:layout_centerVertical="true"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="View all 3 comments"
                 android:textColor="@color/grey"
                 android:textSize="15sp"
+                android:layout_toRightOf="@id/speech_bubble"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/image_comments_link"
                 android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout4"
+            android:layout_below="@+id/relLayout2"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:layout_marginBottom="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,9 +113,7 @@
                 android:text="3 DAYS AGO"
                 android:textColor="@color/grey"
                 android:textSize="15sp"
-                android:layout_below="@+id/image_comments_link"
-                android:id="@+id/image_time_posted"
-                android:layout_marginTop="5dp"/>
+                android:id="@+id/image_time_posted"/>
 
         </RelativeLayout>
 

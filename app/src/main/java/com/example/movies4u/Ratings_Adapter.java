@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -51,15 +53,18 @@ public class Ratings_Adapter extends FirebaseRecyclerAdapter<Ratings_model, Rati
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // get total available quest
                 size[0] = (int) dataSnapshot.getChildrenCount();
+                if(size[0]==0)
+                    holder.viewComment.setText("Add Comment");
+                else if(size[0]==1)
+                    holder.viewComment.setText("View "+size[0]+" Comment");
+                else
+                    holder.viewComment.setText("View all "+size[0]+" Comments");
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
-//        tempDataSnapShot = ref.child("comments").get().getResult();
-//        size[0] = tempDataSnapShot.getChildrenCount();
-//        holder.viewComment.setText("View all "+ size[0]+" Comments");
 
         int timestampdifference = (int) getTimestampDifference(model.getTimestamp());
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
