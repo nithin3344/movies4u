@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">movies4u</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Firebase Messages -->
+    <string name="auth_failed">Failed to Authenticate</string>
+    <string name="auth_success">Authentication Success</string>
+
+    <!-- Firebase database fields-->
+    <string name="dbname_users">users</string>
+    <string name="field_user_id">user_id</string>
+    <string name="dbname_user_account_settings">user_account_settings</string>
 </resources>

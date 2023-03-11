@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "107102530739",
+    "firebase_url": "https://movies4u-2e2e6-default-rtdb.firebaseio.com",
     "project_id": "movies4u-2e2e6",
     "storage_bucket": "movies4u-2e2e6.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "107102530739-p5pj2crqegi0r73c06roaonotln9l13m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movies4u",
+            "certificate_hash": "9dba92fb3c743261987aa9810ef20ac4bc5c678c"
+          }
+        },
         {
           "client_id": "107102530739-f4o0gi3mstk8ub4l4budppstp1vhcugc.apps.googleusercontent.com",
           "client_type": 3
